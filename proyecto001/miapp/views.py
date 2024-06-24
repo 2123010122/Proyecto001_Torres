@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 
 layout = """
-    <h1> Proyecto Web (LP3 - 2024) | Flor Cerdán </h1>
+    <h1> Proyecto Web (LP3 - 2024) | Henry Fabian </h1>
     <hr/>
     <ul>
         <li>
@@ -19,19 +19,11 @@ layout = """
 
 
 def index(request):
-    mensaje="""
-        <h1>Inicio</h1>
-    """
-    return HttpResponse(layout + mensaje)
+    return render(request,'index.html')
 
 
 def saludo(request):
-    mensaje ="""
-        <h1>Bienvenidos al curso</h1>
-        <h2>Mg. Flor Elizabeth Cerdán León</h2>
-        <h3>Todo lo puedo en Cristo que me fortalece</h3>
-    """
-    return HttpResponse(layout + mensaje)
+    return render(request,'saludo.html')
 
 
 
